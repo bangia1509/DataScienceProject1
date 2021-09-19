@@ -18,9 +18,17 @@ def predict():
     Fuel_Type_Diesel=0
     Fuel_Type_Petrol=0
     if request.method == 'POST':
-        Year = int(request.form['Year'])
+        Year = request.form['Year']
+        if Year.isnumeric():
+            Year=int(Year)
+        else:
+            return render_template('index.html')
         Present_Price=float(request.form['Present_Price'])
-        Kms_Driven=int(request.form['Kms_Driven'])
+        Kms_Driven=request.form['Kms_Driven']
+        if Kms_Driven.isnumeric():
+            Kms_Driven=int(Kms_Driven)
+        else:
+            return render_template('index.html')
         Owner=int(request.form['Owner'])
         Fuel_Type_Petrol=request.form['Fuel_Type_Petrol']
         if(Fuel_Type_Petrol=='Petrol'):
