@@ -15,9 +15,7 @@ https://used-car-pricing.herokuapp.com/
   
 ## Methodology Flowchart
 
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+![image](https://user-images.githubusercontent.com/68856038/133958807-ff1b0e12-5c55-48a8-9af5-1fb20f333a29.png)
 
   
 ## Optimizations
