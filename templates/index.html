@@ -15,21 +15,22 @@
 <br><h1>{{ prediction_text }}</h1>
         <form action="{{ url_for('predict')}}" method="post">
             <h2>Used Car Price Prediction</h2><br>
-            <h3>Year</h3>
+            <h3>What is the Year of Purchase?</h3>
             <input id="first" name="Year" type="number " required="required"><br>
 <br><br>            <h3>What is the Showroom Price? (In lakhs)</h3><input id="second" name="Present_Price" required="required">
             <br><br><br><h3>How Many Kilometers Driven?</h3><input id="third" name="Kms_Driven" required="required">
-<br><br><br>            <h3>How many previous owners had the car (<=3) ?</h3><input id="fourth" name="Owner" required="required">
+<br><br><br>            <h3>How many previous owners had the car (<=3)?</h3><input id="fourth" name="Owner" required="required">
 <br><br><br>            <h3>What is the Fuel type?</h3><select name="Fuel_Type_Petrol" id="fuel" required="required">
                 <option value="Petrol">Petrol</option>
                 <option value="Diesel">Diesel</option>
                 <option value="CNG">CNG</option>
             </select>
-<br><br><br>            <h3>Are you a Dealer or an Individual</h3><select name="Seller_Type_Individual" id="resea" required="required">
-                <option value="Dealer">Dealer</option>
+<br><br><br>            <h3>Are you a Dealer or an Individual?</h3><select name="Seller_Type_Individual" id="resea" required="required">
                 <option value="Individual">Individual</option>
+                <option value="Dealer">Dealer</option>
+
             </select>
-<br><br><br>            <h3>What is the Transmission type</h3><select name="Transmission_Mannual" id="research" required="required">
+<br><br><br>            <h3>What is the Transmission type?</h3><select name="Transmission_Mannual" id="research" required="required">
                 <option value="Mannual">Manual Car</option>
                 <option value="Automatic">Automatic Car</option>
             </select>
