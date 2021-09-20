@@ -23,13 +23,20 @@ def predict():
             Year=int(Year)
         else:
             return render_template('index.html')
+        
         Present_Price=float(request.form['Present_Price'])
         Kms_Driven=request.form['Kms_Driven']
         if Kms_Driven.isnumeric():
             Kms_Driven=int(Kms_Driven)
         else:
             return render_template('index.html')
-        Owner=int(request.form['Owner'])
+        Owner=request.form['Owner']
+        if Owner.isnumeric():
+            Owner=int(Owner)
+        else:
+            return render_template('index.html')
+        if Owner==2:
+            Owner=3
         Fuel_Type_Petrol=request.form['Fuel_Type_Petrol']
         if(Fuel_Type_Petrol=='Petrol'):
                 Fuel_Type_Petrol=1
@@ -56,7 +63,7 @@ def predict():
         if output<0:
             return render_template('index.html',prediction_texts="Sorry you cannot sell this car")
         else:
-            return render_template('index.html',prediction_text="You Can Sell The Car at {}".format(output))
+            return render_template('index.html',prediction_text="You Can Sell The Car at {} lakh.".format(output))
     else:
         return render_template('index.html')
 
